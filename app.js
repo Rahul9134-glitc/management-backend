@@ -17,10 +17,13 @@ import GroupRouter from "./src/routes/group.routes.js";
 import ExpenceRouter from "./src/routes/expence.routes.js"
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || "https://management-system-wine-eight.vercel.app", 
+    origin: [
+      "https://management-system-j976rb3zw.vercel.app", 
+      "https://management-system-wine-eight.vercel.app",
+      "http://localhost:5173" 
+    ], 
     credentials: true,
-    methods: 'GET,POST,PUT,DELETE,PATCH',
-    credentials: true, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
 }));
 
 app.use(express.json());
