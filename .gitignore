@@ -1,0 +1,34 @@
+# 1. Dependency folders (Sabse heavy files)
+node_modules/
+jspm_packages/
+
+# 2. Environment variables (SECRET KEYS - Kabhi share mat karna)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 3. Log files ( फालतू की error logs)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+
+# 4. OS related files
+.DS_Store
+Thumbs.db
+
+# 5. Build/Dist folders (Agar tum TypeScript ya build use kar rahe ho)
+dist/
+build/
+
+# 6. IDE/Editor settings (Personal settings)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
