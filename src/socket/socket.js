@@ -5,8 +5,14 @@ let io;
 export const initializeSocket = (server) => {
     io = new Server(server, {
         cors: {
-            origin: "https://management-system-wine-eight.vercel.app",
-            credentials: true
+            origin: [
+                "https://management-system-wine-eight.vercel.app",
+                "https://management-system-rahul-vishwakarmas-projects-456a19b1.vercel.app",
+                "https://management-system-9uyz8uxd7.vercel.app",
+                "http://localhost:5173" 
+            ],
+            credentials: true,
+            methods: ["GET", "POST"]
         }
     });
 
