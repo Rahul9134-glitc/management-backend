@@ -18,7 +18,6 @@ import ExpenceRouter from "./src/routes/expence.routes.js"
 
 app.use(cors({
     origin: [
-      "https://management-system-j976rb3zw.vercel.app", 
       "https://management-system-wine-eight.vercel.app",
       "http://localhost:5173" 
     ], 
@@ -28,6 +27,11 @@ app.use(cors({
 
 app.use(express.json());
 app.use(cookieParser());
+
+
+app.get("/" , (req,res)=>{
+  res.send("Server is Working");
+})
 
 
 //all router of controllers
