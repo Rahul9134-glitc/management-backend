@@ -18,11 +18,11 @@ import ExpenceRouter from "./src/routes/expence.routes.js"
 
 app.use(cors({
     origin: [
-      "https://management-system-wine-eight.vercel.app",
-      "http://localhost:5173" 
-    ], 
+        "https://management-system-rahul-vishwakarmas-projects-456a19b1.vercel.app",
+        "http://localhost:5173"
+    ],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    methods: 'GET,POST,PUT,DELETE,PATCH',
 }));
 
 app.use(express.json());
