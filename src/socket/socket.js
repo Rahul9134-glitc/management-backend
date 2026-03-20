@@ -5,7 +5,7 @@ let io;
 export const initializeSocket = (server) => {
     io = new Server(server, {
         cors: {
-            origin: process.env.CORS_ORIGIN || "https://management-system-wine-eight.vercel.app",
+            origin: "http://localhost:5173",
             credentials: true
         }
     });
