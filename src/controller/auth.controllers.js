@@ -6,8 +6,8 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 
 const cookieOptions = {
   httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
-  sameSite: "lax",
+  secure: true,          
+  sameSite: "None",     
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 
@@ -79,7 +79,11 @@ export const loginUser = asyncHandler(async (req, res) => {
 export const logoutUser = asyncHandler(async (req, res) => {
   return res
     .status(200)
-    .clearCookie("accessToken", cookieOptions)
+    .clearCookie("accessToken", {
+       httpOnly: true,
+       secure: true,
+       sameSite: "None"
+})
     .json(new ApiResponse(200, {}, "User logged out successfully!"));
 });
 
